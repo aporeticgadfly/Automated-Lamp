@@ -1,0 +1,17 @@
+Synopsis: Circuit created to automate the switching of a high wattage lamp. This can be used for anything with current draw exceeding the capabilities of MCUs but was specifically designed for a leopard geckos habitat. 
+	
+	Leopard geckos are crepuscular creatures, using light to time their circadian rhythms. Dusk and dawn are their primary hours of activity. Healthy sleeping cycles necessitate consistent switching of their light source. Leopard geckos also only tolerate a narrow range of heat variations in their environment. A heat lamp fulfills both of these requirements that are normally fulfilled by the sun, however the sun has the advantage of consistent and regular behaviour that lamps do not. Thus the responsibility of turning the lamp on and off falls upon the owner of the leopard gecko. However, the creator of this device found that he is normally entertaining many different thoughts simultaneously throughout most days, resulting in admittedly somewhat forgetful behavior. At the gecko's behest, he created this device to control the light switch without his intervention.
+
+	The simple turning on and off of an external device is typically trivial with microcontrollers. However the power requirements of the lamp presented certain challenges. At 120 volts and several amps of current draw, it was clear that the microcontroller would not be able to handle the lamp directly. Even most commercial transistors were out of the question. The lamp being typically inserted into a wall socket further complicated matters. A female wall socket connector plug was mounted on the circuit, and the circuit has its own terminals for a secondary power source from the actual wall socket. The female wall socket connector is controlled by means of a solid state relay, which can be switched at 5 volts. The microcontroller switches the relay on or off every 12 hours continuously and has its own regulated power supply.
+
+	Future versions of this circuit will likely split heating and light into separate elements. Temperature sensing will also be implemented with a negative feedback loop to fine tune the heating element, given the finicky nature of cold blooded animals in general. Synchronization with the solar cycles is also not out of the question.
+
+Collaborators: Santiago Orellana
+
+Parts List:
+- female wall socket connector
+- solid state relay
+- 2 LEDs
+- 2 220 ohm resistors
+- wall socket wire
+- timing oscillator crystal
